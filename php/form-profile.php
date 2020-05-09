@@ -5,7 +5,7 @@ if($_POST)
     if(empty($_POST['insta'])) { $instagram = "Не указала"; } else { $instagram = $_POST['insta']; }
     $exp = '';
     if(empty($_POST['exp'])) { $exp = "Не указала"; } else { $exp = $_POST['exp']; }
-    $to = "ignator@ro.ru";
+    $to = "matvienkoigor956@gmail.com";
     $subject = "Анкета (Premium Escort)";
     $message = '<span style="font-weight:bold;color:#007610;">Новая анкета, заполненная на сайте</span><br>
     Имя: <span style="font-weight:bold;color:#B38600;">'.$_POST['name'].'</span><br>
