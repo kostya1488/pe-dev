@@ -25,10 +25,12 @@
 $to = 'matvienkoigor956@gmail.com';
 
 if ( isset( $_POST['sendMail'] ) ) {
-	$name	= substr( $_POST['name'], 0, 64 );
+	$name = substr( $_POST['name'], 0, 64 );
+	$age = substr( $_POST['age'], 0, 64 );
+	$city = substr( $_POST['city'], 0, 64 );
 	$tel = substr( $_POST['tel'], 0, 64 );
-	$email	 = substr( $_POST['email'], 0, 64 );
-	$message = substr( $_POST['message'], 0, 250 );
+    $insta = substr( $_POST['insta'], 0, 64 );
+	$exp = substr( $_POST['exp'], 0, 64 );
 
 if($_FILES)
 {
@@ -45,11 +47,12 @@ if($_FILES)
 		}
 	}
 
-	
-	$body = "Имя:\r\n".$name."\r\n\r\n";
-	$body .= "Контактный номер:\r\n".$tel."\r\n\r\n";
-	$body .= "E-mail:\r\n".$email."\r\n\r\n";
-	$body .= "Описание заказа:\r\n".$message; 
+	$body = "Имя: ".$name."\r\n";
+    $body .= "Возраст: ".$age."\r\n";
+    $body .= "Город проживания: ".$city."\r\n";
+    $body .= "Номер телефона: ".$tel."\r\n";
+    $body .= "Инстаграм: ".$insta."\r\n";
+    $body .= "Опыт в данной сфере: ".$exp;
 	send_mail($to, $body, $email, $filename);
 }
 
@@ -59,7 +62,7 @@ if($_FILES)
 // Вспомогательная функция для отправки почтового сообщения с вложением
 function send_mail($to, $body, $email, $filename)
 {
-	$subject = 'Тестирование формы с прикреплением файла с сайта proverstka.com.ua';
+	$subject = 'Заявка с сайта PremiumEscort';
 	$boundary = "--".md5(uniqid(time())); // генерируем разделитель
 	$headers = "From: ".$email."\r\n";	 
 	$headers .= "MIME-Version: 1.0\r\n";

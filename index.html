@@ -461,6 +461,14 @@
                     <label>Имя*:</label>
                     <input name="name" value="" size="40" type="text" class="required" />
                 </p>
+                <p>
+                    <label>Возраст*:</label>
+                    <input name="age" value="" size="40" type="tel" class="required" />
+                </p>
+                <p>
+                    <label>Город*:</label>
+                    <input name="city" value="" size="40" type="text" class="required" />
+                </p>
 
                 <p>
                     <label>Контактный номер*:</label>
@@ -468,23 +476,33 @@
                 </p>
 
                 <p>
-                    <label>E-mail:</label>
-                    <input name="email" value="" size="40" type="email" />
+                    <label>Инстаграм:</label>
+                    <input name="insta" value="" size="40" type="tel" />
                 </p>
 
-                <p>
-                    <label>Описание заказа:</label>
-                    <textarea name="message" cols="40" rows="10"> </textarea>
-                </p>
+                <!--<p>
+                    <label>E-mail:</label>
+                    <input name="email" value="" size="40" type="email" />
+                </p> -->
 
                 <p>
                     <label>Прикрепить файлы:</label>
                     <input name="file[]" value="1" size="40" type="file" multiple />
                 </p>
 
+                <div class="custom-control custom-radio d-inline-flex mr-2">
+                    <input type="radio" id="customRadioInline3" name="exp" value="Есть" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline3">Да</label>
+                </div>
+                <div class="custom-control custom-radio d-inline-flex ml-2">
+                    <input type="radio" id="customRadioInline4" name="exp" value="Нет" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline4">Нет</label>
+                </div>
+
                 <input value="Отправить" name="sendMail" type="submit" />
                 <!-- </fieldset> -->
             </form>
+
             <div class="col d-none d-sm-block mt-4 section-subtittle text-center">
                 <p>*Агентство гарантирует полную конфиденциальность ваших анкет. Мы не занимаемся рассылкой ваших данных, они находятся только у нас. По просьбе девушки мы немедленно удалим фотографии и анкетные данные. Фотографии, которые не прошли кастинг
                     тоже удаляются. В нашем агентстве строгие правила, фотографии и данные девушек - это ваша собственность, поэтому мы обсуждаем с моделью каждый свой шаг!</p>
