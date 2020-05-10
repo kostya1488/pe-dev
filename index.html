@@ -413,47 +413,7 @@
                     </div>
                 </div>
             </div>
-            <!-- <form id="fprofile" action="php/form-profile.php" method="post" enctype="multipart/form-data">
-                <div class="row justify-content-center anketa">
-                    <div class="col-lg-4">
-                        <div class="row">
-                            <div class="col-6"><input id="myname" type="text" name="name" placeholder="Имя" onkeyup="checkParams()" required></div>
-                            <div class="col-6"><input id="myage" type="tel" name="age" placeholder="Возраст" onkeyup="checkParams()" required></div>
-                        </div>
-                        <input type="tel" name="phone" id="myphone" placeholder="Телефон" onkeyup="checkParams()" required>
-                    </div>
-                    <div class="col-lg-4">
-                        <input type="text" name="city" id="mycity" placeholder="Город проживания" onkeyup="checkParams()" required>
-                        <input type="text" name="insta" placeholder="Instagram (необязательно)">
-                    </div>
-                </div><br>
-                <div class="section-subtittle text-center">Добавь пару своих фото</div>
-                <div class="row justify-content-center text-center mt-2">
-                    <div class="col-lg-3 col-md-5 file-width">
-                        <span>Фото в полный рост</span><br>
-                        <input id="file1" name="file[]" type="file" class="inputfile" multiple required>
-                        <label for="file1"><img alt="" src="./img/icon/file-bg.svg"></label>
-                    </div>
-                    <div class="col-lg-3 col-md-5 file-width">
-                        <span>Фото с других ракурсов</span><br>
-                        <input id="file2" name="file[]" type="file" class="inputfile" multiple>
-                        <label for="file2"><img alt="" src="./img/icon/file-bg.svg"></label>
-                    </div>
-                </div><br>
-                <div class="section-subtittle text-center">
-                    <label>Есть ли опыт?</label><br>
-                    <div class="custom-control custom-radio d-inline-flex mr-2">
-                        <input type="radio" id="customRadioInline3" name="exp" value="Есть" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadioInline3">Да</label>
-                    </div>
-                    <div class="custom-control custom-radio d-inline-flex ml-2">
-                        <input type="radio" id="customRadioInline4" name="exp" value="Нет" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadioInline4">Нет</label>
-                    </div>
-                </div>
-                <br>
-                <div style="color: white" class="boot-center" id="profileResult"><button id="btn" disabled class="boot boot-center" type="submit" title="Заполни все обязательные поля" onclick="ajaxFormRequest('profileResult', 'fprofile', 'php/form-profile.php')">Отправить</button></div>
-            </form> -->
+
             <form action="#" method="post" id="fprofile" enctype="multipart/form-data">
                 <!-- <fieldset> -->
                 <div class="row justify-content-center anketa">
@@ -473,34 +433,6 @@
                         <input type="text" name="insta" placeholder="Instagram (необязательно)">
                     </div>
                 </div><br>
-
-                <!-- <p>
-                    <label>Имя*:</label>
-                    <input name="name" value="" size="40" type="text" class="required" />
-                </p>
-                <p>
-                    <label>Возраст*:</label>
-                    <input name="age" value="" size="40" type="tel" class="required" />
-                </p> -->
-                <!-- <p>
-                    <label>Город*:</label>
-                    <input name="city" value="" size="40" type="text" class="required" />
-                </p> -->
-
-                <!-- <p>
-                    <label>Контактный номер*:</label>
-                    <input name="tel" value="" size="40" class="required" type="tel" />
-                </p> -->
-
-                <!-- <p>
-                    <label>Инстаграм:</label>
-                    <input name="insta" value="" size="40" type="tel" />
-                </p> -->
-
-                <!--<p>
-                    <label>E-mail:</label>
-                    <input name="email" value="" size="40" type="email" />
-                </p> -->
 
                 <div class="section-subtittle text-center">Добавь пару своих фото</div>
                 <div class="row justify-content-center text-center mt-2">
@@ -532,25 +464,8 @@
                 </div><br>
 
                 <div style="color: white" class="boot-center" id="profileResult">
-                    <input id="btn" value="Отправить" name="sendMail" type="submit" class="boot boot-center" title="Заполни все обязательные поля" disabled>
+                    <input id="btn" value="Отправить" name="sendMail" type="submit" class="boot boot-center" title="Заполни все обязательные поля" disabled onclick="hideform()">
                 </div>
-
-                <!-- <p>
-                    <label>Прикрепить файлы:</label>
-                    <input name="file[]" value="1" size="40" type="file" multiple />
-                </p> -->
-
-                <!-- <div class="custom-control custom-radio d-inline-flex mr-2">
-                    <input type="radio" id="customRadioInline3" name="exp" value="Есть" class="custom-control-input">
-                    <label class="custom-control-label" for="customRadioInline3">Да</label>
-                </div>
-                <div class="custom-control custom-radio d-inline-flex ml-2">
-                    <input type="radio" id="customRadioInline4" name="exp" value="Нет" class="custom-control-input">
-                    <label class="custom-control-label" for="customRadioInline4">Нет</label>
-                </div> -->
-
-                <!-- <input value="Отправить" name="sendMail" type="submit" /> -->
-                <!-- </fieldset> -->
             </form>
 
             <div class="col d-none d-sm-block mt-4 section-subtittle text-center">

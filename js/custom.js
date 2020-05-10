@@ -144,7 +144,7 @@ window.onload = function() {
         alert("Браузер не поддерживает загрузку файлов на этом сайте");
     }
 }
-var url = "http://www.dr05045.ho.ua/escort/";
+var url = "http://www.dr05045.ho.ua/escort/indexAfterSend.html";
 
 jQuery(document).ready(function() {
     // =validation
@@ -172,6 +172,7 @@ jQuery(document).ready(function() {
 function sendSuccess(callback) {
     jQuery(callback).find("form fieldset").html(thank);
     startClock();
+
 }
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -191,4 +192,9 @@ function readMore(iddots, idmore, idmyBtn) {
         btnText.innerHTML = "Скрыть";
         moreText.style.display = "inline";
     }
+}
+//-------------------------------------------------------------------------------------------------------------------
+function editAnketa() {
+    $(location).attr('href', 'http://www.dr05045.ho.ua/escort/#anketa');
+
 }
