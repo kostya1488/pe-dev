@@ -456,59 +456,109 @@
             </form> -->
             <form action="#" method="post" id="fprofile" enctype="multipart/form-data">
                 <!-- <fieldset> -->
-                <h3>Форма заказа</h3>
-                <p>
+                <div class="row justify-content-center anketa">
+                    <div class="col-lg-4">
+                        <div class="row">
+                            <div class="col-6">
+                                <input id="myname" name="name" value="" size="40" type="text" class="required" placeholder="Имя*" onkeyup="checkParams()" required>
+                            </div>
+                            <div class="col-6">
+                                <input id="myage" name="age" value="" size="40" type="tel" class="required" placeholder="Возраст*" onkeyup="checkParams()" required>
+                            </div>
+                        </div>
+                        <input id="myphone" name="tel" value="" size="40" class="required" placeholder="Телефон*" onkeyup="checkParams()" required>
+                    </div>
+                    <div class="col-lg-4">
+                        <input id="mycity" name="city" value="" size="40" type="text" class="required" placeholder="Город проживания*" onkeyup="checkParams()" required>
+                        <input type="text" name="insta" placeholder="Instagram (необязательно)">
+                    </div>
+                </div><br>
+
+                <!-- <p>
                     <label>Имя*:</label>
                     <input name="name" value="" size="40" type="text" class="required" />
                 </p>
                 <p>
                     <label>Возраст*:</label>
                     <input name="age" value="" size="40" type="tel" class="required" />
-                </p>
-                <p>
+                </p> -->
+                <!-- <p>
                     <label>Город*:</label>
                     <input name="city" value="" size="40" type="text" class="required" />
-                </p>
+                </p> -->
 
-                <p>
+                <!-- <p>
                     <label>Контактный номер*:</label>
                     <input name="tel" value="" size="40" class="required" type="tel" />
-                </p>
+                </p> -->
 
-                <p>
+                <!-- <p>
                     <label>Инстаграм:</label>
                     <input name="insta" value="" size="40" type="tel" />
-                </p>
+                </p> -->
 
                 <!--<p>
                     <label>E-mail:</label>
                     <input name="email" value="" size="40" type="email" />
                 </p> -->
 
-                <p>
+                <div class="section-subtittle text-center">Добавь пару своих фото</div>
+                <div class="row justify-content-center text-center mt-2">
+                    <div class="col-lg-3 col-md-5 file-width">
+                        <span>Фото в полный рост</span><br>
+                        <input id="file1" name="file[]" value="1" size="40" type="file" class="inputfile" multiple>
+                        <label for="file1">
+                            <img alt="" src="./img/icon/file-bg.svg">
+                        </label>
+                    </div>
+                    <div class="col-lg-3 col-md-5 file-width">
+                        <span>Фото с других ракурсов</span><br>
+                        <input id="file2" name="file[]" value="1" size="40" type="file" class="inputfile" multiple>
+                        <label for="file2"><img alt="" src="./img/icon/file-bg.svg"></label>
+
+                    </div>
+                </div><br>
+
+                <div class="section-subtittle text-center">
+                    <label>Есть ли опыт?</label><br>
+                    <div class="custom-control custom-radio d-inline-flex mr-2">
+                        <input type="radio" id="customRadioInline3" name="exp" value="Есть" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline3">Да</label>
+                    </div>
+                    <div class="custom-control custom-radio d-inline-flex ml-2">
+                        <input type="radio" id="customRadioInline4" name="exp" value="Нет" class="custom-control-input">
+                        <label class="custom-control-label" for="customRadioInline4">Нет</label>
+                    </div>
+                </div><br>
+
+                <div style="color: white" class="boot-center" id="profileResult">
+                    <input id="btn" value="Отправить" name="sendMail" type="submit" class="boot boot-center" title="Заполни все обязательные поля" disabled>
+                </div>
+
+                <!-- <p>
                     <label>Прикрепить файлы:</label>
                     <input name="file[]" value="1" size="40" type="file" multiple />
-                </p>
+                </p> -->
 
-                <div class="custom-control custom-radio d-inline-flex mr-2">
+                <!-- <div class="custom-control custom-radio d-inline-flex mr-2">
                     <input type="radio" id="customRadioInline3" name="exp" value="Есть" class="custom-control-input">
                     <label class="custom-control-label" for="customRadioInline3">Да</label>
                 </div>
                 <div class="custom-control custom-radio d-inline-flex ml-2">
                     <input type="radio" id="customRadioInline4" name="exp" value="Нет" class="custom-control-input">
                     <label class="custom-control-label" for="customRadioInline4">Нет</label>
-                </div>
+                </div> -->
 
-                <input value="Отправить" name="sendMail" type="submit" />
+                <!-- <input value="Отправить" name="sendMail" type="submit" /> -->
                 <!-- </fieldset> -->
             </form>
 
             <div class="col d-none d-sm-block mt-4 section-subtittle text-center">
-                <p>*Агентство гарантирует полную конфиденциальность ваших анкет. Мы не занимаемся рассылкой ваших данных, они находятся только у нас. По просьбе девушки мы немедленно удалим фотографии и анкетные данные. Фотографии, которые не прошли кастинг
+                <p>* Агентство гарантирует полную конфиденциальность ваших анкет. Мы не занимаемся рассылкой ваших данных, они находятся только у нас. По просьбе девушки мы немедленно удалим фотографии и анкетные данные. Фотографии, которые не прошли кастинг
                     тоже удаляются. В нашем агентстве строгие правила, фотографии и данные девушек - это ваша собственность, поэтому мы обсуждаем с моделью каждый свой шаг!</p>
             </div>
             <div class="col d-block d-sm-none mt-4 section-subtittle text-center">
-                <p>*Агентство гарантирует полную конфиденциальность ваших анкет. Мы не занимаемся рассылкой ваших данных, они находятся только у нас. По просьбе девушки мы немедленно удалим фотографии и анкетные данные. </p>
+                <p>* Агентство гарантирует полную конфиденциальность ваших анкет. Мы не занимаемся рассылкой ваших данных, они находятся только у нас. По просьбе девушки мы немедленно удалим фотографии и анкетные данные. </p>
             </div>
         </div>
     </section>
