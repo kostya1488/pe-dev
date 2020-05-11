@@ -139,12 +139,12 @@ function checkParams() {
 
 // Как только страничка загрузилась 
 window.onload = function() {
-    // проверяем поддерживает ли браузер FormData 
-    if (!window.FormData) {
-        alert("Браузер не поддерживает загрузку файлов на этом сайте");
+        // проверяем поддерживает ли браузер FormData 
+        if (!window.FormData) {
+            alert("Браузер не поддерживает загрузку файлов на этом сайте");
+        }
     }
-}
-var url = "http://www.dr05045.ho.ua/escort/indexAfterSend.html";
+    // var url = "http://www.dr05045.ho.ua/escort/indexAfterSend.html";
 
 jQuery(document).ready(function() {
     // =validation
@@ -160,7 +160,9 @@ jQuery(document).ready(function() {
             xhr.onreadystatechange = function() {
                 if (xhr.readyState == 4) {
                     if (xhr.status == 200) {
-                        $(location).attr('href', url);
+                        // $(location).attr('href', url);
+
+                        return false
                     }
                 }
             };
@@ -194,7 +196,23 @@ function readMore(iddots, idmore, idmyBtn) {
     }
 }
 //-------------------------------------------------------------------------------------------------------------------
-function editAnketa() {
-    $(location).attr('href', 'http://www.dr05045.ho.ua/escort/#anketa');
+// function editAnketa() {
+//     $(location).attr('href', 'http://www.dr05045.ho.ua/escort/#anketa');
 
+// }
+// hide form after send
+function hideform() {
+    document.forms.formAnketa.style.display = "none";
+}
+// Спасибо! Анкета успешно отправлена.
+// Если ты нам подходишь, мы обязательно свяжемся с тобой для обсуждения всех деталей.
+function hideAnketaSection() {
+    document.getElementById('anketa').style.display = 'none';
+    document.getElementById('anketaAfterSend').style.display = 'block';
+
+}
+
+function showAnketaSection() {
+    document.getElementById('anketaAfterSend').style.display = 'none';
+    document.getElementById('anketa').style.display = 'block';
 }
